@@ -8,17 +8,17 @@ const token = localStorage.getItem('token');
 function TodoList() {
   const [todos, setTodos] = useState([]);
 
-//   useEffect(() => {
-//       const getTodos = async() => {
-//         try{
-//             const todoData = await todoApi.getTodos(token);
-//             setTodos(todoData);
-//         }catch(error){
-//             console.log(error);
-//         }
-//       }
-//       getTodos();
-//   }, [todos]);
+  useEffect(() => {
+      const getTodos = async() => {
+        try{
+            const todoData = await todoApi.getTodos(token);
+            setTodos(todoData);
+        }catch(error){
+            console.log(error);
+        }
+      }
+      getTodos();
+  }, [todos]);
 
   const addTodo = async (todo) => {
     if (!todo.text || /^\s*$/.test(todo.text)) {

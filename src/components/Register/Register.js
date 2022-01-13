@@ -56,17 +56,17 @@ export default function Register() {
   const [password, setPassword] = useState();
   const [disabledSignUp, setDisabledSignUp] = useState(false);
 
-  // const validatePassword = (value) => {
-  //   if(validator.isStrongPassword(value, {
-  //     minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1
-  //   })) {    
-  //     return true;
-  //   }
-  //   else{
-  //     return false;
-  //     setDisabledSignUp(true);
-  //   }
-  // }
+  const validatePassword = (value) => {
+    if(validator.isStrongPassword(value, {
+      minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1
+    })) {    
+      return true;
+    }
+    else{
+      return false;
+      setDisabledSignUp(true);
+    }
+  }
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -121,17 +121,17 @@ export default function Register() {
               type="password"
               onChange={e => setPassword(e.target.value)}
             />
-            {/* {validatePassword(password) && (
+            {validatePassword(password) && (
               // setDisabledSignUp(true);
               <p>Mật khẩu phải có ít nhất 8 ký tự, chứa ít nhất 1 chữ thường, 1 chữ hoa, 1 số</p>
-            )} */}
+            )}
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
-              // disabled = {disabledSignUp}
+              disabled = {disabledSignUp}
             >
               Sign Up
             </Button>
