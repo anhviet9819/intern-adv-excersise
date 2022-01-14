@@ -121,22 +121,23 @@ export default function Register() {
               type="password"
               onChange={e => setPassword(e.target.value)}
             />
-            {validatePassword(password) && (
-              // setDisabledSignUp(true);
+            {/* {validatePassword(password) && (
+              setDisabledSignUp(true);
               <p>Mật khẩu phải có ít nhất 8 ký tự, chứa ít nhất 1 chữ thường, 1 chữ hoa, 1 số</p>
-            )}
+            )} */}
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
-              disabled = {disabledSignUp}
+              // disabled = {disabledSignUp}
             >
               Sign Up
             </Button>
           </form>
           {/* <Link to="/login">Sign In here!</Link> */}
+          {/* Fix link to sign in */}
         </div>
       </Grid>
     </Grid>

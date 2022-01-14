@@ -134,6 +134,7 @@ export default function Login() {
     </Grid>
     {/* <Link to="./Register">Register</Link> */}
     {/* <Redirect to="/register">Register</Redirect> */}
+    {/* Fix link to sign up */}
     </div>
     
   );
