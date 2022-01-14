@@ -132,7 +132,7 @@ export default function Login() {
         </div>
       </Grid>
     </Grid>
-    <Link to="/register">Register</Link>
+    {/* <Link to="./Register">Register</Link> */}
     {/* <Redirect to="/register">Register</Redirect> */}
     </div>
     
